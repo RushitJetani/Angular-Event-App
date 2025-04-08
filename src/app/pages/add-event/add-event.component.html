@@ -1,0 +1,22 @@
+<h2>Add Event</h2>
+<form [formGroup]="addEventForm" (ngSubmit)="onSubmit()">
+  <label for="name">Event Name:</label>
+  <input id="name" formControlName="name">
+  <div *ngIf="addEventForm.get('name')?.invalid && addEventForm.get('name')?.touched">
+    Name is required.
+  </div>
+
+  <label for="detail">Event Details:</label>
+  <textarea id="detail" formControlName="detail"></textarea>
+  <div *ngIf="addEventForm.get('detail')?.invalid && addEventForm.get('detail')?.touched">
+    Detail is required.
+  </div>
+
+  <label for="category">Category:</label>
+  <input id="category" formControlName="category">
+  <div *ngIf="addEventForm.get('category')?.invalid && addEventForm.get('category')?.touched">
+    Category is required.
+  </div>
+
+  <button type="submit" [disabled]="addEventForm.invalid">Submit</button>
+</form>
