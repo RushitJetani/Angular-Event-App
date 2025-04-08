@@ -1,59 +1,114 @@
-# AngularEventApp
+# 🎉 Angular 19 Event Management App
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.3.
+This is a modern **Angular 19** app that provides a simple solution to manage events. It includes features like adding new events, viewing a list of events, and organizing events by category. The app communicates with a backend API to fetch and add events.
 
-## Development server
+Deployed Link: https://angular-event-app.vercel.app/
 
-To start a local development server, run:
+## 🚀 Features
+
+- **Event Creation**: Add new events with details like name, category, and description.
+- **Event List**: View a list of events with details.
+- **Event Categories**: Organize events by their categories (e.g., Party, Conference, Workshop).
+- **Server-Side Rendering**: Supports efficient server-side rendering with `HttpClient` using `fetch` API for better performance.
+- **Responsive Design**: Fully responsive design to work across all devices.
+- **Reactive Forms**: For adding events with input validation.
+
+## 🛠️ Technologies Used
+
+- **Angular 19**: Latest version of Angular for building dynamic web applications.
+- **Angular Router**: For navigation between different pages (Home, News, Events, Add Event).
+- **HttpClient**: For API communication (GET and POST requests).
+- **Reactive Forms**: To handle user input for adding events with validation.
+- **CSS**: Custom styles for a clean and modern UI.
+
+## ⚡ Quick Start
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/2025-Winter-ITE-5425-IRA/quiz-4-RushitJetani.git
+cd quiz-4-RushitJetani
+```
+
+### 2. Install Dependencies
+
+Ensure you have **Node.js** and **npm** installed, then run:
+
+```bash
+npm install
+```
+
+### 3. Serve the App
+
+Start the development server:
 
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+The app will be available at **`http://localhost:4200`**.
 
-## Code scaffolding
+### 4. Build for Production
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+To build the project for production:
 
 ```bash
-ng generate --help
+ng build --prod
 ```
 
-## Building
+This will generate a `dist/` folder with the production-ready build.
 
-To build the project run:
+---
 
-```bash
-ng build
-```
+## 📑 Pages and Features
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+### **Home Page**
 
-## Running unit tests
+- **Welcome message** and overview of the app features.
+- **Call to action** to start adding new events.
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+### **News Page**
 
-```bash
-ng test
-```
+- Placeholder for **news and updates** about the event system.
+- You can expand this page by adding dynamic news or content.
 
-## Running end-to-end tests
+### **Events Page**
 
-For end-to-end (e2e) testing, run:
+- Displays a **list of events** fetched from the API.
+- Each event is displayed using the **Event Detail Component**.
+- The events are fetched via a `GET` request from the API endpoint: `https://product-app-74q6.onrender.com/events`.
 
-```bash
-ng e2e
-```
+### **Add Event Page**
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+- Provides a **reactive form** to add a new event.
+- Input fields include: `Event Name`, `Event Detail`, and `Event Category`.
+- Form validation ensures that all fields are filled before submission.
 
-## Additional Resources
+## 🛠️ API Endpoints
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+### **GET** `/events`
+
+Fetches all events from the backend API.
+
+### **POST** `/events`
+
+Adds a new event. The body should contain the following fields:
+- `name` (string): The event name.
+- `detail` (string): A short description of the event.
+- `category` (string): The event category (e.g., Party, Conference).
+
+## 🧑‍💻 Development Setup
+
+### Running the Project Locally
+
+1. Clone the repo and install dependencies.
+2. Run the development server using:
+
+   ```bash
+   ng serve
+   ```
+
+3. Open your browser and visit `http://localhost:4200`.
+
+---
+
